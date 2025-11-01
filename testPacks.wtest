@@ -1,1 +1,11 @@
-// completar
+import packs.*
+
+describe 'Primeros tests' {
+
+    const jorge = new Coordinador (cantidadDeViajes = 20, estaMotivado = true, añosDeExperiencia = 2, rolActual = rolGuia)
+    const packNacionalSimple = new PackNacional (duracion = 10, precioBase = 30000, coordinador = jorge, provinciaDeDestino = 'Catamarca')
+
+    test 'Un pack nacional sin beneficios vigentes devuelve el precio base' {
+        assert.equals(30000, packNacionalSimple.costoFinal())
+    }
+}
